@@ -46,24 +46,25 @@ const Contact = ({ onSuccess, onError }) => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      // Initialize EmailJS (do this once, preferably in App.jsx)
-      emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY); // Replace with your public key
+      emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
 
       await emailjs.send(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID, // Replace with your service ID
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID, // Replace with your template ID
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         {
           to_email: 'memonadnan0421@gmail.com',
           from_name: formData.name,
           from_email: formData.email,
+          reply_to: formData.email,        // ✅ Add this line only
           subject: formData.subject,
           phone: formData.phone,
           message: formData.message,
+          sent_date: new Date().toLocaleString(),
         }
       );
 
@@ -138,7 +139,7 @@ const Contact = ({ onSuccess, onError }) => {
               </h4>
               <div className="grid grid-cols-4 gap-3">
                 <a
-                  href="https://linkedin.com/in/adnanmemon/"
+                  href="https://linkedin.com/in/adnanmemon11/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-primary/10 text-primary hover:bg-primary hover:text-white rounded-lg transition-all duration-300 hover:scale-110 flex items-center justify-center"

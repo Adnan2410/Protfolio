@@ -80,7 +80,7 @@ const Hero = () => {
                         {/* Social Links */}
                         <div className="flex gap-4 pt-6">
                             <a
-                                href="https://linkedin.com/in/adnanmemon/"
+                                href="https://linkedin.com/in/adnanmemon11/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="p-3 rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"

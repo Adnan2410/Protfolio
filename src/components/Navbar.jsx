@@ -27,7 +27,7 @@ const Navbar = () => {
   const socialLinks = [
     { icon: FaEnvelope, href: 'mailto:memonadnan042@gmail.com', label: 'Email' },
     { icon: FaPhone, href: 'tel:+917490959665', label: 'Phone' },
-    { icon: FaLinkedin, href: 'https://linkedin.com/in/adnanmemon/', label: 'LinkedIn' },
+    { icon: FaLinkedin, href: 'https://linkedin.com/in/adnanmemon11/', label: 'LinkedIn' },
     { icon: FaGithub, href: 'https://github.com/Adnan2410', label: 'GitHub' },
   ];
 
